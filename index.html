@@ -63,15 +63,15 @@
         const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
         // Prediction 2: run input through teachable machine classification model
         const prediction = await model.predict(posenetOutput);
-/*
+
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
-*/
-        if(prediction[3].probability.toFixed(2)>0.90){
-            var audio = new Audio('アナログ置き時計の目覚まし音-効果音.mp3');
+
+        if(prediction[3].probability.toFixed(2) > 0.90){
+            var audio = new Audio('1.mp3');
             audio.play();
         }
         // finally draw the poses

@@ -72,11 +72,14 @@
 
         if(prediction[2].probability.toFixed(2) > 0.90){
             status = "Sleep" 
+        }else{
+            status = "Wake"
         }
         if(status == "Sleep"){
             var audio = new Audio('1.mp3');
             audio.play();
         }
+        
         // finally draw the poses
         drawPose(pose);
     }

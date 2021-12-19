@@ -57,6 +57,8 @@
         window.requestAnimationFrame(loop);
     }
     var status = "Sleep"
+    var audio = new Audio('1.mp3');
+    audio.play();
     async function predict() {
         // Prediction #1: run input through posenet
         // estimatePose can take in an image, video or canvas html element
@@ -71,8 +73,7 @@
         }
 
         if(prediction[2].probability.toFixed(2) > 0.90){
-            var audio = new Audio('1.mp3');
-            audio.play();
+            status = "Sleep" 
         }
         // finally draw the poses
         drawPose(pose);

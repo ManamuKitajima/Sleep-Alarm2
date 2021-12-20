@@ -79,7 +79,9 @@
         if(status == "Sleep"){
             audio.play();
         }else if(status == "Wake"){
-            audio.mute();
+            audio.pause();
+        }else{
+            audio.pause();
         }
         
         // finally draw the poses

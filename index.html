@@ -70,7 +70,7 @@
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
-/*
+
         if(prediction[2].probability.toFixed(2) > 0.90){
             status = "Sleep" 
         }else{
@@ -81,7 +81,7 @@
         }else if(status == "Wake"){
             audio.mute();
         }
-  */      
+        
         // finally draw the poses
         drawPose(pose);
     }
